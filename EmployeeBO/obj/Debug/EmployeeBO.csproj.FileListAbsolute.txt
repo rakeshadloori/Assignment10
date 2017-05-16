@@ -1,0 +1,4 @@
+C:\Users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\EmployeeBO\bin\Debug\EmployeeBO.dll
+C:\Users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\EmployeeBO\bin\Debug\EmployeeBO.pdb
+C:\Users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\EmployeeBO\obj\Debug\EmployeeBO.dll
+C:\Users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\EmployeeBO\obj\Debug\EmployeeBO.pdb

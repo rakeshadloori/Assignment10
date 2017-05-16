@@ -1,0 +1,10 @@
+C:\Users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\WebService\obj\Debug\WebService.csprojResolveAssemblyReference.cache
+C:\Users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\WebService\bin\WebService.dll.config
+C:\Users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\WebService\bin\WebService.dll
+C:\Users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\WebService\bin\WebService.pdb
+C:\Users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\WebService\bin\EmployeeBO.dll
+C:\Users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\WebService\bin\EmployeeBO.pdb
+C:\Users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\WebService\obj\Debug\WebService.dll
+C:\Users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\WebService\obj\Debug\WebService.pdb
+C:\Users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\WebService\bin\EmployeeRepo.dll
+C:\Users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\WebService\bin\EmployeeRepo.pdb

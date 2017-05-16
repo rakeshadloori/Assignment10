@@ -1,0 +1,33 @@
+﻿@model EmployeeBO.EmpBO
+@{
+    ViewBag.Title = "Index14";
+}
+
+<h2>Index14</h2>
+
+@using(Html.BeginForm("Index14", "Employee", FormMethod.Post))
+{
+    <input type="text" name="name" value="@ViewBag.Name" />
+    <input type="submit" value="Find" />
+}
+
+<br />
+@if (Model != null)
+{
+    <div class="row">
+            <div class="col-xs-2"><label>Name</label></div>
+            <div class="col-xs-2"><label>Age</label></div>
+            <div class="col-xs-2"><label>JoiningDate</label></div>
+            <div class="col-xs-2"><label>Salary</label></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2">@Model.Name</div>
+        <div class="col-xs-2">@Model.Age</div>
+        <div class="col-xs-2">@Model.JoiningDate.ToShortDateString()</div>
+        <div class="col-xs-2">@Model.Salary</div>
+    </div>
+}
+else
+{
+    @ViewBag.Msg
+}

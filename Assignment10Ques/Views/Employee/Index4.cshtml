@@ -1,0 +1,75 @@
+﻿@model EmployeeBO.EmpViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h4>Employee Table</h4>
+<div class="row">
+    <div class="col-xs-3">
+        <label>Id</label>
+    </div>
+    <div class="col-xs-3">
+        <label>Name</label>
+    </div>
+    <div class="col-xs-3">
+        <label>Age</label>
+    </div>
+    <div class="col-xs-3">
+        <label>Joinng Date</label>
+    </div>
+
+</div>
+@foreach (var item in Model.EmpBO)
+{
+    <div class="row">
+        <div class="col-xs-3">
+            @item.Id
+        </div>
+        <div class="col-xs-3">
+            @item.Name
+        </div>
+        <div class="col-xs-3">
+            @item.Age
+        </div>
+        <div class="col-xs-3">
+            @item.JoiningDate
+        </div>
+    </div>
+}
+<br />
+<br />
+
+<h4>Employee Details Table</h4>
+<div class="row">
+    <div class="col-xs-3">
+        <label>Id</label>
+    </div>
+    <div class="col-xs-3">
+        <label>Emp Id</label>
+    </div>
+    <div class="col-xs-3">
+        <label>Phone</label>
+    </div>
+    <div class="col-xs-3">
+        <label>Email</label>
+    </div>
+
+</div>
+
+@foreach (var item in Model.EmpDetailsBO)
+{
+    <div class="row">
+        <div class="col-xs-3">
+            @item.Id
+        </div>
+        <div class="col-xs-3">
+            @item.EmpId
+        </div>
+        <div class="col-xs-3">
+            @item.Phone
+        </div>
+        <div class="col-xs-3">
+            @item.Email
+        </div>
+    </div>
+}

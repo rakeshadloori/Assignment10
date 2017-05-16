@@ -1,0 +1,7 @@
+c:\users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\EmployeeRepo\bin\Debug\EmployeeRepo.dll
+c:\users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\EmployeeRepo\bin\Debug\EmployeeRepo.pdb
+c:\users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\EmployeeRepo\obj\Debug\EmployeeRepo.csprojResolveAssemblyReference.cache
+c:\users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\EmployeeRepo\obj\Debug\EmployeeRepo.dll
+c:\users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\EmployeeRepo\obj\Debug\EmployeeRepo.pdb
+c:\users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\EmployeeRepo\bin\Debug\EmployeeBO.dll
+c:\users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\EmployeeRepo\bin\Debug\EmployeeBO.pdb

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetMonth">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMonthResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMonthResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthHeader" type="tns:AuthHeader" />
+      <s:complexType name="AuthHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="GetMonthNoAuthentication">
+        <s:complexType />
+      </s:element>
+      <s:complexType name="Months">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfMonths">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Months" nillable="true" type="tns:Months" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetMonthNoAuthenticationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMonthNoAuthenticationResult" type="tns:ArrayOfMonths" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmployees">
+        <s:complexType />
+      </s:element>
+      <s:complexType name="EmpBO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Age" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="JoiningDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Salary" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfEmpBO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EmpBO" nillable="true" type="tns:EmpBO" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetEmployeesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeesResult" type="tns:ArrayOfEmpBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCountries">
+        <s:complexType />
+      </s:element>
+      <s:complexType name="CountryList">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCountryList">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CountryList" nillable="true" type="tns:CountryList" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCountriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCountriesResult" type="tns:ArrayOfCountryList" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Calculte">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cal" type="tns:Calc" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Calc">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Num1" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Num2" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Operation" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CalculteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CalculteResult" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetMonthSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMonth" />
+  </wsdl:message>
+  <wsdl:message name="GetMonthSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMonthResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMonthAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetMonthNoAuthenticationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMonthNoAuthentication" />
+  </wsdl:message>
+  <wsdl:message name="GetMonthNoAuthenticationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMonthNoAuthenticationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmployees" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmployeesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCountriesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCountries" />
+  </wsdl:message>
+  <wsdl:message name="GetCountriesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCountriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalculteSoapIn">
+    <wsdl:part name="parameters" element="tns:Calculte" />
+  </wsdl:message>
+  <wsdl:message name="CalculteSoapOut">
+    <wsdl:part name="parameters" element="tns:CalculteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceAppSoap">
+    <wsdl:operation name="GetMonth">
+      <wsdl:input message="tns:GetMonthSoapIn" />
+      <wsdl:output message="tns:GetMonthSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMonthNoAuthentication">
+      <wsdl:input message="tns:GetMonthNoAuthenticationSoapIn" />
+      <wsdl:output message="tns:GetMonthNoAuthenticationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployees">
+      <wsdl:input message="tns:GetEmployeesSoapIn" />
+      <wsdl:output message="tns:GetEmployeesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <wsdl:input message="tns:GetCountriesSoapIn" />
+      <wsdl:output message="tns:GetCountriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Calculte">
+      <wsdl:input message="tns:CalculteSoapIn" />
+      <wsdl:output message="tns:CalculteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceAppSoap" type="tns:ServiceAppSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMonth">
+      <soap:operation soapAction="http://tempuri.org/GetMonth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetMonthAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMonthNoAuthentication">
+      <soap:operation soapAction="http://tempuri.org/GetMonthNoAuthentication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployees">
+      <soap:operation soapAction="http://tempuri.org/GetEmployees" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <soap:operation soapAction="http://tempuri.org/GetCountries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Calculte">
+      <soap:operation soapAction="http://tempuri.org/Calculte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceAppSoap12" type="tns:ServiceAppSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMonth">
+      <soap12:operation soapAction="http://tempuri.org/GetMonth" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetMonthAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMonthNoAuthentication">
+      <soap12:operation soapAction="http://tempuri.org/GetMonthNoAuthentication" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployees">
+      <soap12:operation soapAction="http://tempuri.org/GetEmployees" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <soap12:operation soapAction="http://tempuri.org/GetCountries" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Calculte">
+      <soap12:operation soapAction="http://tempuri.org/Calculte" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceApp">
+    <wsdl:port name="ServiceAppSoap" binding="tns:ServiceAppSoap">
+      <soap:address location="http://localhost:56352/ServiceApp.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceAppSoap12" binding="tns:ServiceAppSoap12">
+      <soap12:address location="http://localhost:56352/ServiceApp.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

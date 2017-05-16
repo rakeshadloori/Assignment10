@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "Index12";
+}
+
+<h2>Index12</h2>
+
+@using(Html.BeginForm("Index13", "Employee", FormMethod.Post))
+{
+    <input type="submit" value="Update Salary" />
+    <h5>@ViewBag.res</h5>
+}

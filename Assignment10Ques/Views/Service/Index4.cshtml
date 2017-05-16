@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Index4";
+}
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+<h2>Index4</h2>
+
+<input type="button" id="btnGetCountry" value="Get Countries List" />
+
+
+<div id="tblCountry">
+
+</div>
+<script>
+    $(document).ready(function () {
+        
+        $("#btnGetCountry").click(function () {
+            $.ajax({
+                url: "http://localhost:56352/ServiceApp.asmx/GetCountries",
+                method: "POST",
+                dataType: "xml",
+                success: function (data) {
+                    var table = "<table><tr><th>Country</th></tr>";
+                    $(data).find("CountryList").each(function () {
+                        var country = $(this).find("Country").text();
+                        table += "<tr><td>" + country + "</td></tr>";
+                    });
+                    table += "</table>";
+                    $("#tblCountry").empty();
+                    $("#tblCountry").append(table);
+
+                },
+                error: function(data){
+
+                }
+            });
+        });
+    });
+</script>

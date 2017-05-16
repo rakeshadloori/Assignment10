@@ -1,0 +1,39 @@
+﻿@model List<EmployeeBO.EmpBO>
+
+@{
+    ViewBag.Title = "Index10";
+}
+
+<h2>Index10</h2>
+
+@using (Html.BeginForm("Index10", "Employee", FormMethod.Post))
+{
+    for (int i = 0; i < 2; i++)
+    {
+        <div class="row">
+            <div class="col-xs-3">
+                <label>Name</label>
+                @Html.EditorFor(Model => Model[i].Name)
+             </div>
+            <div class="col-xs-3">
+                <label>Age</label>
+                @Html.EditorFor(Model => Model[i].Age)
+            </div>
+            <div class="col-xs-3">
+                <label>Joining Date</label>
+                @Html.EditorFor(Model => Model[i].JoiningDate)
+            </div>
+            <div class="col-xs-3">
+                <label>Salary</label>
+                @Html.EditorFor(Model => Model[i].Salary)
+            </div>
+        </div>
+    }
+
+    <input type="submit" value="insert" />
+
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

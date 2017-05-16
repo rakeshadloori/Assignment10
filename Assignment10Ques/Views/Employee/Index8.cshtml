@@ -1,0 +1,47 @@
+﻿@model EmployeeBO.EmpViewModel1
+
+@{
+    ViewBag.Title = "Index8";
+}
+
+<h2>Index8</h2>
+
+@using (Html.BeginForm("Index8", "Employee", FormMethod.Post)) 
+{
+    <div class="row">
+        <div class="col-xs-4">@Html.LabelFor(model => model.EmpBO.Name)</div>
+        <div class="col-xs-4">@Html.EditorFor(model => model.EmpBO.Name)</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">@Html.LabelFor(model => model.EmpBO.Age)</div>
+        <div class="col-xs-4">@Html.EditorFor(model => model.EmpBO.Age)</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">@Html.LabelFor(model => model.EmpBO.JoiningDate)</div>
+        <div class="col-xs-4">@Html.EditorFor(model => model.EmpBO.JoiningDate)</div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-4">@Html.LabelFor(model => model.EmpBO.Salary)</div>
+        <div class="col-xs-4">@Html.EditorFor(model => model.EmpBO.Salary)</div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-4">@Html.LabelFor(model => model.EmpDetailsBO.Phone)</div>
+        <div class="col-xs-4">@Html.EditorFor(model => model.EmpDetailsBO.Phone)</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">@Html.LabelFor(model => model.EmpDetailsBO.Email)</div>
+        <div class="col-xs-4">@Html.EditorFor(model => model.EmpDetailsBO.Email)</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">@Html.LabelFor(model => model.EmpDetailsBO.Skills)</div>
+        <div class="col-xs-4">@Html.EditorFor(model => model.EmpDetailsBO.Skills)</div>
+    </div>
+    <div>
+       <input type="submit" value="create" />
+    </div>
+}
+    <div>
+       @Html.ActionLink("Back to List", "Index")
+    </div>

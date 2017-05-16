@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<h2>Index</h2>
+
+<input type="button" value="Get Emp" id="btnEmp" />
+
+<script>
+    $(document).ready(function(){
+        $("#btnEmp").click(function () {
+            $.ajax({
+                url: "http://localhost:56654/Service1.svc/GetDataJson",
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                dataType: "jsonp",
+                success: function (data) {
+                    var data1 = JSON.parse(data);
+                    console.log(data1);
+
+                },
+                error: function(data){
+                    console.log(data);
+                }
+            });
+        });
+    });
+</script>
+
+

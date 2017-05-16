@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    In my life, I used the following web search engines:<br />
+    <a href="javascript: registerHandlers()">Yahoo!</a><br />
+    <a href="javascript: registerHandlers()">AltaVista</a><br />
+    <a href="javascript: registerHandlers()">Google</a><br />
+</body>
+
+
+
+
+</html>
+
+<script>
+    function registerHandlers() {
+        var as = document.getElementsByTagName('a');
+        for (var i = 0; i < as.length; i++) {
+            as[i].onclick = (function (index) {
+                return function () {
+                    alert(index);
+                    return false;
+                }
+            }(i));
+        }
+    }
+</script>

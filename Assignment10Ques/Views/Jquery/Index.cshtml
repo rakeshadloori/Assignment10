@@ -1,0 +1,241 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<h2>Index</h2>
+
+@* 1. Different Selectors, JQuery CDN *@
+<h3>Question 1</h3>
+<p>$("#Id")</p> 
+<p>$(".Class")</p>
+<p>$("p")</p>
+
+<p>CDN- Content Delivery Network. Access files from servers near by our location. </p>
+@* 2. li *@
+<h3>Question 2</h3>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+    <li>11</li>
+    <li>12</li>
+</ul>
+
+@* 3. Ajax *@
+<h3>Question 3</h3>
+<div class="row">
+    <div class="col-xs-4">
+        <label>Name</label>
+    </div>
+    <div class="col-xs-4">
+        <input type="text" id="txtName" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-4">
+        <label>Age</label>
+    </div>
+    <div class="col-xs-4">
+        <input type="text" id="txtAge" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-4">
+        <label>JoiningDate</label>
+    </div>
+    <div class="col-xs-4">
+        <input type="text" id="txtJoiningDate" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-4">
+        <label>Salary</label>
+    </div>
+    <div class="col-xs-4">
+        <input type="text" id="txtSalary" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-8">
+        <input type="button" value="create" id="btnCreate" />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-8">
+        <h5 id="txtRes"></h5>
+    </div>
+</div>
+
+@* 4. No Conflict *@
+<h3>Question 4</h3>
+<input type="button" onclick="noConf()" value="No Conflict"/>
+<h3 id="nConf" hidden>No Conflict</h3>
+<br />
+@* 5. JQuery Callback *@
+<h3>Question 5</h3>
+<input type="button" onclick="callBackFunc()" value="Call Back" /> <br /><br />
+<img src="/Content/img.jpg" id="img1" />
+<br />
+@* 6. SetInterval vs TimeOut *@
+<h3>Question 6</h3>
+<h4 style="color:red" id="pAnimate"></h4>
+<br />
+@* 7. Insert Horizontal Row *@
+<h3>Question 7</h3>
+<p>In the ancient Empire of Mahishmati in south India, Sivagami, the queen mother (Ramya Krishnan), emerges injured from a cave adjoining a big waterfall, carrying a baby.</p>
+<p>She kills the soldiers pursuing her and sacrifices herself to save the baby by holding the baby up over the surface of the water while she herself drowns.</p>
+<p>Local tribal communities save the baby and the tribal queen, Sanga (Rohini) adopts him. She also gives him the name 'Shivudu'.</p>
+<p>Sanga also orders her tribesmen to lock the passage along the waterfalls, so that her son would never leave her.</p>
+<p>Shivudu (Prabhas) grows up to be a strong young man aspiring to ascend the waterfall and makes many unsuccessful attempts at it. </p>
+<p>One day, he finds a wooden mask of a girl which falls from the waterfall.</p>
+<p>Driven to find out the identity of the girl, he climbs the mountain again and succeeds this time.</p>
+<p>On top of the waterfall, Shivudu discovers that the mask belongs to Avanthika (Tamannaah), a rebellious warrior whose group has indulged in a guerilla warfare against the emperor Bhallala Deva (Rana Daggubati) of the Mahishmati Kingdom. </p>
+<p>The group intends to rescue their former queen Devasena (Anushka Shetty), who has been chained open in the Palace for the past 25 years. Avanthika is given the opportunity to rescue the queen, in the upcoming festival.</p>
+<p>Shivudu approaches Avanthika while she is on her journey to Mahishmathi.</p>
+
+<br />
+@* 8. Json Employee Details *@
+<h3>Question 8</h3>
+<input type="button" value="Get Employee" id="btnJsonData"/>
+<div id="tblJsonData"></div> <br />
+
+@* 9. Add class to paragraph  *@
+<h3>Question 9</h3>
+
+<br />
+<div class="para">
+    <p>In the ancient Empire of Mahishmati in south India, Sivagami, the queen mother (Ramya Krishnan), emerges injured from a cave adjoining a big waterfall, carrying a baby.</p>
+    <p>She kills the soldiers pursuing her and sacrifices herself to save the baby by holding the baby up over the surface of the water while she herself drowns.</p>
+    <p>Local tribal communities save the baby and the tribal queen, Sanga (Rohini) adopts him. She also gives him the name 'Shivudu'.</p>
+    <p>Sanga also orders her tribesmen to lock the passage along the waterfalls, so that her son would never leave her.</p>
+    <p>Shivudu (Prabhas) grows up to be a strong young man aspiring to ascend the waterfall and makes many unsuccessful attempts at it. </p>
+    <p>One day, he finds a wooden mask of a girl which falls from the waterfall.</p>
+    <p>Driven to find out the identity of the girl, he climbs the mountain again and succeeds this time.</p>
+    <p>On top of the waterfall, Shivudu discovers that the mask belongs to Avanthika (Tamannaah), a rebellious warrior whose group has indulged in a guerilla warfare against the emperor Bhallala Deva (Rana Daggubati) of the Mahishmati Kingdom. </p>
+    <p>The group intends to rescue their former queen Devasena (Anushka Shetty), who has been chained open in the Palace for the past 25 years. Avanthika is given the opportunity to rescue the queen, in the upcoming festival.</p>
+    <p>Shivudu approaches Avanthika while she is on her journey to Mahishmathi.</p>
+</div>
+@* 10. JQuery Debug *@
+<h3>Question 10</h3>
+<h4>debugger, Developer console</h4>
+<br />
+@* Ans. Debugger *@
+
+    <style>
+        li:nth-child(2n), li:nth-child(3), li:nth-child(7) {
+            color: red;
+        }
+
+        .para1{
+            color: orange;
+        }
+
+    </style>
+
+    <script type="text/javascript">
+
+            
+        function callBackFunc() {
+            $("#img1").fadeOut(1000, function () {
+                alert("AnimationCompleted");
+            });
+
+        }
+
+        function noConf(){
+            var JQueryVar = jQuery.noConflict();
+            JQueryVar("#nConf").show();
+        }
+
+        $(document).ready(function () {
+            
+            
+
+            setInterval(function () {
+                var dt = new Date();
+
+                var h = ("0" + dt.getHours()).slice(-2);
+                var m = ("0" + dt.getMinutes()).slice(-2);
+                var s = ("0" + dt.getSeconds()).slice(-2);
+
+                var currentTime = h + ":" + m + ":" + s;
+                var hours = dt.getHours();
+                var mins = dt.getMinutes();
+                var sec = dt.getSeconds();
+                //var currentTime = hours <10 ? '0'+hours: hours + ":" + mins <10 ? '0'+mins: mins + ":" + sec < 10? '0'+sec: sec;
+                $("#pAnimate").text(currentTime);
+            }, 1000);
+
+
+            setTimeout(function () {
+                //alert("Hi !!!");
+            }, 10000);
+
+
+            var ran = Math.floor((Math.random() * 10) + 1);
+            $(".para p:nth-child("+ran+")").addClass('para1');
+            //setInterval(function () { alert("Hello"); }, 3000);
+
+            //Inserting Horizontal row after every paraghraph
+            $("p").append("<hr />");
+            // Json Data
+            $("#btnJsonData").click(function () {
+                $("#tblJsonData").empty();
+                $.ajax({
+                    url: "http://localhost:62901/Employee/Index17",
+                    method: "Get",
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: "Json",
+                    success: function (data) {
+                        var table = "<table><tr><th>Name</th><th>Age</th><th>Salary</th> </tr>"
+                        $.each(data, function (index, value) {
+                            table += "<tr><td>"+value.Name+"</td><td>"+value.Age+"</td><td>"+value.Salary+"</td></tr>";
+                        });
+                        table += "</table>";
+                        $("#tblJsonData").append(table);
+                    },
+                    error: function (error) {
+                    }
+                });
+            });
+
+            
+
+            //Ajax call to inert data
+            $("#btnCreate").click(function () {
+                $.ajax( {
+                    url: "http://localhost:62901/Employee/Index16",
+                    method: "POST",
+                    data: {
+                        Name: $("#txtName").val(),
+                        Age: $("#txtAge").val(),
+                        JoiningDate: $("#txtJoiningDate").val(),
+                        Salary: $("#txtSalary").val()
+                    },
+                    success: function (data) {
+                        $("#txtRes").text(data);
+                    },
+                    error: function (error) {
+
+                    }
+
+                    
+                });
+            })
+
+        });
+    </script>

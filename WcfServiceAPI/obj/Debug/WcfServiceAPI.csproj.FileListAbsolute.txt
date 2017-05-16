@@ -1,0 +1,10 @@
+C:\Users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\WcfServiceAPI\bin\WcfServiceAPI.dll.config
+C:\Users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\WcfServiceAPI\bin\WcfServiceAPI.dll
+C:\Users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\WcfServiceAPI\bin\WcfServiceAPI.pdb
+C:\Users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\WcfServiceAPI\bin\EmployeeBO.dll
+C:\Users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\WcfServiceAPI\bin\EmployeeRepo.dll
+C:\Users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\WcfServiceAPI\bin\EmployeeBO.pdb
+C:\Users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\WcfServiceAPI\bin\EmployeeRepo.pdb
+C:\Users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\WcfServiceAPI\obj\Debug\WcfServiceAPI.csprojResolveAssemblyReference.cache
+C:\Users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\WcfServiceAPI\obj\Debug\WcfServiceAPI.dll
+C:\Users\rakes\documents\visual studio 2015\Projects\Assignment10Ques\WcfServiceAPI\obj\Debug\WcfServiceAPI.pdb

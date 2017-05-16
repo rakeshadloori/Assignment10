@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "SendObject";
+}
+
+<h2>SendObject</h2>
+
+<label>Name</label>
+<input type="text" id="txtName"/>
+
+<br />
+<label>Age</label>
+<input type="text" id="txtAge" />
+
+<br />
+<label>Joinin Date</label>
+<input type="text" id="txtJoiningDate" />
+
+<br />
+<label>Salary</label>
+
+<br />
+<input type="text" id="txtSalary" />
+
+<input type="button" id="btnSubmit" value="Insert" />
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#btnSubmit").click(function () {
+            //alert("hi");
+            var data = {
+                Name: $("#txtName").val(),
+                Age: $("#txtAge").val(),
+                JoiningDate: $("#txtJoiningDate").val(),
+                Salary: $("#txtSalary").val()
+            };
+            //alert(data);
+            $.ajax({
+                url: "http://localhost:56660/api/InsertEmp",
+                method: "POST",
+                data: JSON.stringify(data),
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+
+                success: function(data){
+                    alert(data);
+                },
+                error: function(error){
+                    console.log(error);
+                }
+
+            });
+        });
+    });
+</script>

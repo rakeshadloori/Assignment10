@@ -1,0 +1,35 @@
+﻿@model Assignment10Ques.ServiceReference1.Calc
+@{
+    ViewBag.Title = "Index5";
+}
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+<h2>Index5</h2>
+
+@using(Html.BeginForm("Index5", "Service", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-xs-4">@Html.LabelFor(model => model.Num1)</div>
+        <div class="col-xs-4">@Html.EditorFor(model => model.Num1)</div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-4">@Html.LabelFor(model => model.Num2)</div>
+        <div class="col-xs-4">@Html.EditorFor(model => model.Num2)</div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-4">@Html.LabelFor(model => model.Operation)</div>
+        <div class="col-xs-4">@Html.EditorFor(model => model.Operation)</div>
+    </div>
+    
+    <input type="submit" value="Calculate" id="btnCalculate" />
+}
+
+<h3>Res: @ViewBag.Res </h3>
